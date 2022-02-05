@@ -1,5 +1,5 @@
 ---
-title: "Building a Sustainable R Ecosystem for Reporting"
+title: "Reproducible Analytical Workflows in R"
 subtitle: "Lindsey Dietz, PhD"
 author: "2022 Iowa State Business Analytics Symposium"
 date: 'April 5, 2022'
@@ -45,34 +45,97 @@ The views expressed in this presentation are strictly my own. They do not necess
 
 ## Who am I?
 
-```{r echo=FALSE, out.width= "40%", out.extra='style="float:right; padding:10px"'}
-knitr::include_graphics("img/LindseyDietz.png")
-```
-
+.left-column[
 - [Financial Economist/Stress Testing Production Function Lead @ Federal Reserve Bank of Minneapolis ](https://www.minneapolisfed.org/news-releases/2021/dietz-recognized-for-excellence-in-bank-supervision)
-    - Lead the team working on implementation, execution, and analysis of models used to conduct stress testing on the nation's largest banks
+    - I lead the team working on implementation, execution, and analysis of models used to conduct stress testing on the nation's largest banks.
     
-- [Co-creator of the noRth conference](https://rnorthconference.github.io/)
+- [Co-creator of the noRth R user conference](https://rnorthconference.github.io/)
 - [Co-organizer of the R Ladies - Twin Cities meetup](https://www.meetup.com/rladies-tc/members/)
 - [IF/THEN AAAS STEM Ambassador Alumni](https://www.ifthenshecan.org/ambassadors/)
 
 - [Hall of Fame college athlete at the University of Minnesota-Duluth](https://umdbulldogs.com/honors/umd-athletic-hall-of-fame/lindsey-dietz/130)
 - PhD in Statistics from University of Minnesota-Twin Cities
+]
+
+.right-column[
+```{r echo=FALSE, out.width= "95%"}
+knitr::include_graphics("img/statue.jpg")
+```
+]
 ---
 
-## Goal of this discussion
+## Can you relate to this process of reporting?
 
-Introduce R tools communicate a data story in a professional, sustainable, and beautiful way. 
-.center[![description of the image](img/environmental-data-science-r4ds-general.png)]
+- Do analysis in one tool (Excel/R/Python/SAS/SPSS/Minitab/Stata/Matlab)
 
-```{r echo=FALSE, out.width= "75%", out.extra='style="float:center"'}
+--
+
+- Make tables and charts in another tool (Excel/Tableau/PowerBI)
+
+--
+
+- Screenshot or paste everything into a text editor (Word/LaTeX)
+
+--
+
+- Turn it into a final product (PDF/PowerPoint)
+--
+.center[
+![Gif](https://media.giphy.com/media/2wZpm9zyceDyXHPf5S/giphy.gif?cid=ecf05e478g7s2h8a64fmbzty3bbgu6lh5ctbqmxh6t289p1t&rid=giphy.gif&ct=g)
+]
+
+---
+
+## We can do it all with R!
+
+```{r echo=FALSE, out.width= "95%", out.extra='style="float:center"'}
 knitr::include_graphics("img/environmental-data-science-r4ds-general.png")
 ```
 
 ---
 
-## Thank you Iowa State!
-Two R visionaries did their doctoral work at Iowa State. 
+## What is R?
+
+ - R is an **open source software** suite including
+    - an effective **data handling** and storage facility,
+    - a suite of operators for **calculations** on arrays, in particular matrices,
+    - an integrated collection of intermediate tools for **data analysis and graphics**, and
+    - a **programming language** which includes conditionals, loops, user-defined recursive functions and input and output facilities.
+
+## R works best when combined with RStudio
+
+RStudio is an **open source** integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.
+
+---
+
+## R packages
+
+ - The open source nature of R allows users to create software extensions called packages
+ - Packages are the fundamental units of reproducible R code.
+ 
+---
+
+## R users are an amazingly supportive community
+
+.pull-left[
+```{r echo=FALSE, out.width= "100%", out.extra='style="float:center"'}
+knitr::include_graphics("img/code_hero_rstats.png")
+```
+]
+.pull-right[
+
+- R Ladies - worldwide organization to promote gender diversity
+ 
+- R User Groups - in many major cities across the world
+
+- R conferences - [rstudio::conf](https://www.rstudio.com/conference/), [useR!](https://user2022.r-project.org/), many local options
+ 
+- R Twitter (#rstats)
+]
+---
+
+## R <- Iowa State University
+Two R visionaries did their PhDs in Statistics at Iowa State. 
 .pull-left[
 [**Hadley Wickham**](https://hadley.nz/), Chief Scientist at RStudio
 Creator of the `tidyverse` (`ggplot2`, `dplyr`, ...)
@@ -108,25 +171,6 @@ Creator of `rmarkdown` + workflow tools
 >- Shiny - we are going to focus on HTML (primary) and PDF (secondary) reports
 
 The good news is several speakers tomorrow will cover Shiny and other graphics applications!
-
----
-
-## Older process of reporting
-
-- Do analysis in one tool (R/SAS/SPSS/etc.)
---
-
-- Make tables and charts in another tool (Excel)
---
-
-- Paste everything into a text editor (Word/LaTeX)
---
-
-- Turn it into a final product (PDF)
---
-.center[
-![Gif](https://media.giphy.com/media/2wZpm9zyceDyXHPf5S/giphy.gif?cid=ecf05e478g7s2h8a64fmbzty3bbgu6lh5ctbqmxh6t289p1t&rid=giphy.gif&ct=g)
-]
 
 ---
 
@@ -226,7 +270,7 @@ tinytex::install_tinytex()
 
 ---
 
-## Step 3. Build your tabular content
+## Building tabular content
 
 There are many table packages. For HTML, `DT` and `reactable` are good starting points. For pdf, `kableExtra` is the gold standard.
 
@@ -234,14 +278,13 @@ There are many table packages. For HTML, `DT` and `reactable` are good starting 
 
 ---
 
-## Step 4. Build your graphical content
+## Building graphical content
 
 `ggplot2` works great as a static graphics package. For interactive graphics, use packages like `plotly` or `highcharter`.
 
 .center[![](img/presenting_monster.png)]
 
 ---
-
 
 ## Tips for Tables and Graphics
 
@@ -288,6 +331,4 @@ Slides created via the R packages:
 ---
 class: inverse center middle
 
-# Topic Changing Interstitial
-
----
+# Thank you! Questions?
