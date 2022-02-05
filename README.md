@@ -1,5 +1,5 @@
 # Summary
-Speaker materials for Dr. Lindsey Dietz at the 2022 Iowa State Business Analytics Symposium held on April 4, 2022.
+Speaker materials for Dr. Lindsey Dietz at the 2022 Iowa State Business Analytics Symposium held on April 5, 2022.
 
 # Startup Materials
 
