@@ -1,0 +1,107 @@
+---
+title: "My Dazzling Report"
+author: "Lindsey Dietz, PhD"
+date: "`r Sys.Date()`"
+output: pdf_document
+params:
+  dept: 'Management Committee'
+  data_end_date: '2021-09-01'
+
+---
+<!-- (stuff above this line is YAML and behaves differently than the rest of the doc) -->
+
+
+<!-- (this just shows up when you create Rmarkdown) -->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- (using parameters in Rmarkdown; don't forget the r) -->
+This is my report for the `r paste(params$dept)`. 
+
+
+<!-- (making sections) -->
+
+## Some Info
+
+<!-- (** makes it bold) -->
+**This is really important information that people should read before looking at my output.**
+
+Here is a key formula that the reader should know about: $y = \alpha + \beta x$.
+
+References:
+
+<!-- (one type of link) -->
+ - Tabs: https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html
+ - [Using Rmarkdown in your development process](https://rstudio.com/resources/rstudioconf-2020/rmarkdown-driven-development/)
+
+<!-- (another type of link) -->
+These are the R packages I'm going to highlight:
+
+<!-- (here is an R code chunk; I've used some options to hide things) -->
+```{r libraries1, warning = FALSE, include = FALSE, message = FALSE}
+library(dplyr)
+library(tidyr)
+```
+
+```{r libraries2, warning = FALSE, message = FALSE}
+#The report
+library(rmarkdown)
+
+#Tables
+library(kableExtra)
+
+#Plots
+library(ggplot2)
+```
+
+I'm going to get some unemployment data from FRED to demo but I'm hiding my code from you.
+
+```{r, results = 'hide', echo=FALSE, message = FALSE}
+source("../scripts/fred_script.R")
+start_date <- "2005-01-01"
+end_date <- params$data_end_date
+analyst_info <- data.frame(start_date, end_date, date_executed = Sys.Date())
+df <- fred_function(start_date = start_date, end_date = end_date)
+```
+
+<details>
+<summary> Analysts might want to know this information. </summary>
+```{r, message = FALSE}
+print(analyst_info)
+```
+</details>
+
+## Fixed Tables
+
+### with kableExtra
+
+["The goal of kableExtra is to help you build common complex tables and manipulate table styles. It imports the pipe %>% symbol from magrittr and verbalize all the functions, so basically you can add “layers” to a kable output in a way that is similar with ggplot2 and plotly." -- Hao Zhu](https://haozhu233.github.io/kableExtra/)
+
+
+
+```{r fred_table, echo=FALSE}
+df %>%
+  dplyr::filter(recession == TRUE & quarter_start == TRUE) %>%
+  dplyr::select(Category, Date, UR) %>%
+  dplyr::mutate(UR = kableExtra::cell_spec(UR,  "latex", color = 'white', background = kableExtra::spec_color(UR, begin = 0.3, end = 0.8, direction = -1, alpha = 0.5, option = 'B'))) %>%
+  knitr::kable(caption = "Recession Unemployment Rates by Demographic", escape = F, align = "llr") %>%
+  kableExtra::collapse_rows(columns = 1) %>%
+  kableExtra::kable_styling(latex_options = c("HOLD_position")) %>%
+  kableExtra::kable_paper()
+
+```
+
+## Fixed Plot
+
+<!-- (Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.) -->
+```{r plot, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+
+myplot <- ggplot(df, aes(x = Date, y = UR, color = Category)) + 
+  geom_line() +
+  theme_bw() + ylab("Unemployment Rate")
+
+#Fixed ggplot
+myplot
+
+```
