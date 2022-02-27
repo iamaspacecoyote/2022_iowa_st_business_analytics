@@ -113,6 +113,11 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
  - The open source nature of R allows users to create software extensions called packages
  - Packages are the fundamental units of reproducible R code.
  
+ .center[
+ ![](img/hex-stickers.png)
+ ]
+
+ 
 ---
 
 ## R users are an amazingly supportive community
