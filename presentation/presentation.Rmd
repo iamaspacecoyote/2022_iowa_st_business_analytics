@@ -1,10 +1,8 @@
 ---
-title: "Reproducible Analytical Workflows in R"
-subtitle: "Lindsey Dietz, PhD"
-author: "2022 Iowa State Business Analytics Symposium"
-date: 'April 5, 2022'
+
 output:
   xaringan::moon_reader:
+    seal: false
     css: custom.css
     nature:
       slideNumberFormat: "%current%"
@@ -12,6 +10,18 @@ output:
       highlightLines: true
       ratio: 16:9
       countIncrementalSlides: true
+---
+
+class: inverse center middle
+
+# Reproducible Analytical Workflows in R
+
+## Lindsey Dietz, PhD
+### 2022 Iowa State Business Analytics Symposium
+### April 5, 2022
+
+### Download my materials: github.com/iamaspacecoyote/2022_iowa_st_business_analytics
+
 ---
 
 ```{r setup, include=FALSE}
@@ -46,15 +56,19 @@ The views expressed in this presentation are strictly my own. They do not necess
 ## Who am I?
 
 .left-column[
-- [Financial Economist/Stress Testing Production Function Lead @ Federal Reserve Bank of Minneapolis ](https://www.minneapolisfed.org/news-releases/2021/dietz-recognized-for-excellence-in-bank-supervision)
-    - I lead the team working on implementation, execution, and analysis of models used to conduct stress testing on the nation's largest banks.
-    
-- [Co-creator of the noRth R user conference](https://rnorthconference.github.io/)
-- [Co-organizer of the R Ladies - Twin Cities meetup](https://www.meetup.com/rladies-tc/members/)
-- [IF/THEN AAAS STEM Ambassador Alumni](https://www.ifthenshecan.org/ambassadors/)
+- [Financial Economist/Stress Testing Production Function Lead @ Federal Reserve Bank of Minneapolis](https://www.minneapolisfed.org/news-releases/2021/dietz-recognized-for-excellence-in-bank-supervision)
+    - I lead the team working on implementation, execution, and analysis of models for stress testing the nation's largest banks.
 
-- [Hall of Fame college athlete at the University of Minnesota-Duluth](https://umdbulldogs.com/honors/umd-athletic-hall-of-fame/lindsey-dietz/130)
-- PhD in Statistics from University of Minnesota-Twin Cities
+- R Enthusiast and STEM diversity advocate
+    - [Co-creator of the noRth R user conference](https://rnorthconference.github.io/)
+    - [Co-organizer of the R Ladies - Twin Cities meetup](https://www.meetup.com/rladies-tc/members/)
+    - [IF/THEN AAAS STEM Ambassador](https://www.si.edu/womensfutures)
+
+- Stathlete
+    - [BS and MS in Math; Hall of Fame collegiate athlete at the University of Minnesota-Duluth](https://www.youtube.com/watch?reload=9&v=AzCXX9gH7ME)
+    - PhD in Statistics from University of Minnesota-Twin Cities
+
+
 ]
 
 .right-column[
@@ -62,6 +76,39 @@ The views expressed in this presentation are strictly my own. They do not necess
 knitr::include_graphics("img/statue.jpg")
 ```
 ]
+---
+class: inverse center middle
+
+# Let's Dive In!
+
+# https://github.com/iamaspacecoyote/2022_iowa_st_business_analytics
+
+---
+## Objectives of this discussion
+
+- Provide a starter pack on the R ecosystem and setup to support report creation in HTML
+
+--
+
+- Provide examples of table and graphics packages to display analysis
+
+--
+
+- Sprinkle in tips and tricks to make your reports dazzling and reproducible
+
+
+---
+
+## Self-study extensions (i.e. not covered)
+
+- Setting up version control 
+    - Please use it! Check out Jenny Bryan's [Happy Git and Github with R](https://happygitwithr.com/)
+
+--
+
+- Details of the tables or graphics packages 
+    - These could easily be their own long form tutorials
+
 ---
 
 ## Can you relate to this process of reporting?
@@ -108,16 +155,39 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
 
 ---
 
+## [*Action Item*] Download and Install R & RStudio
+
+- Install R 4.1.2 or higher
+    - Navigate to a nearby CRAN mirror: https://cran.r-project.org/mirrors.html; for example: https://mirror.las.iastate.edu/CRAN/
+    - Choose the download for your operating system
+
+- Install RStudio 2021.09.2+382 or higher
+    - Navigate to https://rstudio.com/products/rstudio/download/
+    - Choose the download for your operating system
+---
+
 ## R packages
 
- - The open source nature of R allows users to create software extensions called packages
+ - The open source nature of R allows users to create software extensions called *packages*.
  - Packages are the fundamental units of reproducible R code.
+ - [You can make your own packages to support your work!](https://www.youtube.com/watch?v=J45Hs9XyN68)
  
  .center[
  ![](img/hex-stickers.png)
  ]
 
+---
+
+## [*Action Item*] Installing Packages
+
+ - Open RStudio
+ - Run the following command in your R console window
  
+```{r library_install, eval=FALSE}
+install.packages(c('dplyr', 'tidyr', 'rmarkdown', 
+                   'ggplot2', 'fredr', 'highcharter', 'plotly'))
+```
+
 ---
 
 ## R users are an amazingly supportive community
@@ -153,29 +223,38 @@ Creator of `rmarkdown` + workflow tools
 ]
 
 ---
+class: inverse center middle
 
-## In this tutorial
-
-- How to set up your R ecosystem to support report creation in HTML (and PDF)
-
---
-
-- Examples of table and graphics packages to support analysis
-
---
-
-- Tips and tricks to make your reports dazzling and reproducible
-
+# Making Dazzling Reports
 
 ---
 
-## Not in this tutorial
+![Artwork by @allison_horst](img/cracked_setwd.png)
 
->- Setting up version control - please use it! Check out Jenny Bryan's [Happy Git and Github with R](https://happygitwithr.com/)
->- Details of the tables or graphics packages - these could easily be their own tutorials
->- Shiny - we are going to focus on HTML (primary) and PDF (secondary) reports
+---
 
-The good news is several speakers tomorrow will cover Shiny and other graphics applications!
+## R Project 
+
+"R experts keep all the files associated with a project together — input data, R scripts, analytical results, figures. This is such a wise and common practice that RStudio has built-in support for this via projects." 
+
+-- Hadley Wickham ([R for Data Science](https://r4ds.had.co.nz/workflow-projects.html))
+
+--
+
+R projects define your working directories:
+
+  - Paths are relative rather than fixed
+  - Your work is portable and tidy
+
+---
+
+## [*Action Item*] Make an R project
+
+ 1. Open RStudio 
+ 2. Configure global options to avoid saving .Rdata
+     - Tools -> Global Options -> Workspace -> Uncheck the box. Change the dropdown to Never.
+     - Restart RStudio
+ 3. Create an R project to associate with this talk or another set of files
 
 ---
 

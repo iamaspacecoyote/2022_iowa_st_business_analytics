@@ -10,7 +10,6 @@ Speaker materials for Dr. Lindsey Dietz at the 2022 Iowa State Business Analytic
 ## Install RStudio 2021.09.2+382 or higher
 - Navigate to https://rstudio.com/products/rstudio/download/
 - Choose the download for your operating system
-- Install the following R packages in your R instance
 
 ## Try R!
 - Take a look at some of the free books available online including: [R for Data Science](https://r4ds.had.co.nz/index.html), [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/), [Happy Git with and Github for the useR](https://happygitwithr.com/index.html)
