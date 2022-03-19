@@ -18,7 +18,7 @@ class: inverse center middle
 ### 2022 Iowa State Business Analytics Symposium
 ### April 5, 2022
 
-### Download my materials: github.com/iamaspacecoyote/2022_iowa_st_business_analytics
+### Download talk materials: github.com/iamaspacecoyote/2022_iowa_st_business_analytics
 
 ---
 
@@ -35,15 +35,15 @@ The views expressed in this presentation are strictly my own. They do not necess
 ## Who am I?
 
 .left-column[
-- [Financial Economist/Stress Testing Production Function Lead @ Federal Reserve Bank of Minneapolis](https://www.minneapolisfed.org/news-releases/2021/dietz-recognized-for-excellence-in-bank-supervision)
++ [Financial Economist/Stress Testing Production Function Lead @ Federal Reserve Bank of Minneapolis](https://www.minneapolisfed.org/news-releases/2021/dietz-recognized-for-excellence-in-bank-supervision)
     - I lead the team working on implementation, execution, and analysis of models for stress testing the nation's largest banks.
 
-- R Enthusiast and STEM diversity advocate
++ R Enthusiast and STEM diversity advocate
     - [Co-creator of the noRth R user conference](https://rnorthconference.github.io/)
     - [Co-organizer of the R Ladies - Twin Cities meetup](https://www.meetup.com/rladies-tc/members/)
     - [IF/THEN AAAS STEM Ambassador](https://www.si.edu/womensfutures)
 
-- Stathlete
++ Stathlete
     - [BS and MS in Math; Hall of Fame collegiate athlete at the University of Minnesota-Duluth](https://www.youtube.com/watch?reload=9&amp;v=AzCXX9gH7ME)
     - PhD in Statistics from University of Minnesota-Twin Cities
 
@@ -51,7 +51,7 @@ The views expressed in this presentation are strictly my own. They do not necess
 ]
 
 .right-column[
-&lt;img src="img/statue.jpg" width="95%" /&gt;
+&lt;img src="img/statue.jpg" width="85%" /&gt;
 ]
 ---
 class: inverse center middle
@@ -124,6 +124,8 @@ class: inverse center middle
     - an integrated collection of intermediate tools for **data analysis and graphics**, and
     - a **programming language** which includes conditionals, loops, user-defined recursive functions and input and output facilities.
 
+--
+
 ## R works best when combined with RStudio
 
 RStudio is an **open source** integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.
@@ -132,11 +134,12 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
 
 ## [*Action Item*] Download and Install R &amp; RStudio
 
-- Install R 4.1.2 or higher
-    - Navigate to a nearby CRAN mirror: https://cran.r-project.org/mirrors.html; for example: https://mirror.las.iastate.edu/CRAN/
+- Install R 4.1.3 or higher
+    - Navigate to a nearby CRAN mirror: https://cran.r-project.org/mirrors.html
+        - Use the Iowa State mirror: https://mirror.las.iastate.edu/CRAN/
     - Choose the download for your operating system
 
-- Install RStudio 2021.09.2+382 or higher
+- Install RStudio 2022.02.0+443 or higher
     - Navigate to https://rstudio.com/products/rstudio/download/
     - Choose the download for your operating system
 ---
@@ -222,6 +225,25 @@ R projects define your working directories:
 
 ---
 
+## Folder Infrastructure
+
+.pull-left[ 
+
+- Store code (R scripts) separate from your reporting (R Markdown) files
+ 
+- Consider pre-processing and storage of summary data 
+ 
+- Don't try to fit too much into one report; separate reports can sit in one folder
+ ]
+ 
+.pull-right[ 
+ 
+ ![Folder structure](img/folder.jpg)
+
+]
+
+---
+
 ## [*Action Item*] Make an R project
 
  1. Open RStudio 
@@ -277,25 +299,6 @@ R Markdown files are designed to be used in three ways:
  - Using tabs and drop downs to improve pagination
  - Adding meaningful color to output
  - [Style output using HTML themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/)
-   
----
-
-## Folder Infrastructure
-
-.pull-left[ 
-
-- Store long R scripts separate from your R Markdown files
- 
-- Consider preprocessing and storage of summary data 
- 
-- Don't try to fit too much into one report; separate reports into their own folder
- ]
- 
-.pull-right[ 
- 
- ![Folder structure](img/folder.jpeg)
-
-]
 
 ---
 

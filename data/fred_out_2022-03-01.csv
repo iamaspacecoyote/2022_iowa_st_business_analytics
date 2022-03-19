@@ -146,13 +146,13 @@
 2017-01-01,"Total",4.7,FALSE,TRUE
 2017-02-01,"Total",4.6,FALSE,FALSE
 2017-03-01,"Total",4.4,FALSE,FALSE
-2017-04-01,"Total",4.5,FALSE,TRUE
+2017-04-01,"Total",4.4,FALSE,TRUE
 2017-05-01,"Total",4.4,FALSE,FALSE
 2017-06-01,"Total",4.3,FALSE,FALSE
 2017-07-01,"Total",4.3,FALSE,TRUE
 2017-08-01,"Total",4.4,FALSE,FALSE
-2017-09-01,"Total",4.2,FALSE,FALSE
-2017-10-01,"Total",4.1,FALSE,TRUE
+2017-09-01,"Total",4.3,FALSE,FALSE
+2017-10-01,"Total",4.2,FALSE,TRUE
 2017-11-01,"Total",4.2,FALSE,FALSE
 2017-12-01,"Total",4.1,FALSE,FALSE
 2018-01-01,"Total",4,FALSE,TRUE
@@ -170,10 +170,10 @@
 2019-01-01,"Total",4,FALSE,TRUE
 2019-02-01,"Total",3.8,FALSE,FALSE
 2019-03-01,"Total",3.8,FALSE,FALSE
-2019-04-01,"Total",3.7,FALSE,TRUE
-2019-05-01,"Total",3.7,FALSE,FALSE
+2019-04-01,"Total",3.6,FALSE,TRUE
+2019-05-01,"Total",3.6,FALSE,FALSE
 2019-06-01,"Total",3.6,FALSE,FALSE
-2019-07-01,"Total",3.6,FALSE,TRUE
+2019-07-01,"Total",3.7,FALSE,TRUE
 2019-08-01,"Total",3.7,FALSE,FALSE
 2019-09-01,"Total",3.5,FALSE,FALSE
 2019-10-01,"Total",3.6,FALSE,TRUE
@@ -182,23 +182,29 @@
 2020-01-01,"Total",3.5,FALSE,TRUE
 2020-02-01,"Total",3.5,TRUE,FALSE
 2020-03-01,"Total",4.4,TRUE,FALSE
-2020-04-01,"Total",14.8,TRUE,TRUE
-2020-05-01,"Total",13.3,TRUE,FALSE
-2020-06-01,"Total",11.1,TRUE,FALSE
+2020-04-01,"Total",14.7,TRUE,TRUE
+2020-05-01,"Total",13.2,TRUE,FALSE
+2020-06-01,"Total",11,TRUE,FALSE
 2020-07-01,"Total",10.2,TRUE,TRUE
 2020-08-01,"Total",8.4,TRUE,FALSE
-2020-09-01,"Total",7.8,TRUE,FALSE
+2020-09-01,"Total",7.9,TRUE,FALSE
 2020-10-01,"Total",6.9,TRUE,TRUE
 2020-11-01,"Total",6.7,TRUE,FALSE
 2020-12-01,"Total",6.7,TRUE,FALSE
-2021-01-01,"Total",6.3,TRUE,TRUE
+2021-01-01,"Total",6.4,TRUE,TRUE
 2021-02-01,"Total",6.2,TRUE,FALSE
 2021-03-01,"Total",6,TRUE,FALSE
-2021-04-01,"Total",6.1,TRUE,TRUE
+2021-04-01,"Total",6,TRUE,TRUE
 2021-05-01,"Total",5.8,TRUE,FALSE
 2021-06-01,"Total",5.9,TRUE,FALSE
 2021-07-01,"Total",5.4,TRUE,TRUE
 2021-08-01,"Total",5.2,TRUE,FALSE
+2021-09-01,"Total",4.7,TRUE,FALSE
+2021-10-01,"Total",4.6,TRUE,TRUE
+2021-11-01,"Total",4.2,TRUE,FALSE
+2021-12-01,"Total",3.9,TRUE,FALSE
+2022-01-01,"Total",4,TRUE,TRUE
+2022-02-01,"Total",3.8,TRUE,FALSE
 2005-01-01," Black/African American",10.6,FALSE,TRUE
 2005-02-01," Black/African American",10.9,FALSE,FALSE
 2005-03-01," Black/African American",10.5,FALSE,FALSE
@@ -343,62 +349,68 @@
 2016-10-01," Black/African American",8.5,FALSE,TRUE
 2016-11-01," Black/African American",8.2,FALSE,FALSE
 2016-12-01," Black/African American",8,FALSE,FALSE
-2017-01-01," Black/African American",7.4,FALSE,TRUE
+2017-01-01," Black/African American",7.5,FALSE,TRUE
 2017-02-01," Black/African American",8,FALSE,FALSE
-2017-03-01," Black/African American",7.9,FALSE,FALSE
-2017-04-01," Black/African American",7.8,FALSE,TRUE
-2017-05-01," Black/African American",7.6,FALSE,FALSE
-2017-06-01," Black/African American",7.1,FALSE,FALSE
-2017-07-01," Black/African American",7.2,FALSE,TRUE
-2017-08-01," Black/African American",7.5,FALSE,FALSE
+2017-03-01," Black/African American",7.8,FALSE,FALSE
+2017-04-01," Black/African American",7.7,FALSE,TRUE
+2017-05-01," Black/African American",7.7,FALSE,FALSE
+2017-06-01," Black/African American",6.9,FALSE,FALSE
+2017-07-01," Black/African American",7.3,FALSE,TRUE
+2017-08-01," Black/African American",7.7,FALSE,FALSE
 2017-09-01," Black/African American",7.2,FALSE,FALSE
 2017-10-01," Black/African American",7.6,FALSE,TRUE
 2017-11-01," Black/African American",7.5,FALSE,FALSE
-2017-12-01," Black/African American",6.9,FALSE,FALSE
+2017-12-01," Black/African American",6.7,FALSE,FALSE
 2018-01-01," Black/African American",7.5,FALSE,TRUE
 2018-02-01," Black/African American",6.8,FALSE,FALSE
-2018-03-01," Black/African American",6.6,FALSE,FALSE
-2018-04-01," Black/African American",6.5,FALSE,TRUE
-2018-05-01," Black/African American",5.8,FALSE,FALSE
-2018-06-01," Black/African American",6.5,FALSE,FALSE
-2018-07-01," Black/African American",6.4,FALSE,TRUE
-2018-08-01," Black/African American",6.2,FALSE,FALSE
-2018-09-01," Black/African American",6.2,FALSE,FALSE
-2018-10-01," Black/African American",6.4,FALSE,TRUE
-2018-11-01," Black/African American",6.2,FALSE,FALSE
-2018-12-01," Black/African American",6.8,FALSE,FALSE
-2019-01-01," Black/African American",6.9,FALSE,TRUE
-2019-02-01," Black/African American",7,FALSE,FALSE
+2018-03-01," Black/African American",6.7,FALSE,FALSE
+2018-04-01," Black/African American",6.3,FALSE,TRUE
+2018-05-01," Black/African American",5.9,FALSE,FALSE
+2018-06-01," Black/African American",6.4,FALSE,FALSE
+2018-07-01," Black/African American",6.5,FALSE,TRUE
+2018-08-01," Black/African American",6.3,FALSE,FALSE
+2018-09-01," Black/African American",6.1,FALSE,FALSE
+2018-10-01," Black/African American",6.5,FALSE,TRUE
+2018-11-01," Black/African American",6.1,FALSE,FALSE
+2018-12-01," Black/African American",6.7,FALSE,FALSE
+2019-01-01," Black/African American",7,FALSE,TRUE
+2019-02-01," Black/African American",7.1,FALSE,FALSE
 2019-03-01," Black/African American",6.5,FALSE,FALSE
-2019-04-01," Black/African American",6.6,FALSE,TRUE
+2019-04-01," Black/African American",6.5,FALSE,TRUE
 2019-05-01," Black/African American",6.1,FALSE,FALSE
-2019-06-01," Black/African American",6,FALSE,FALSE
-2019-07-01," Black/African American",5.6,FALSE,TRUE
-2019-08-01," Black/African American",5.2,FALSE,FALSE
+2019-06-01," Black/African American",5.8,FALSE,FALSE
+2019-07-01," Black/African American",5.8,FALSE,TRUE
+2019-08-01," Black/African American",5.4,FALSE,FALSE
 2019-09-01," Black/African American",5.4,FALSE,FALSE
 2019-10-01," Black/African American",5.6,FALSE,TRUE
-2019-11-01," Black/African American",5.7,FALSE,FALSE
-2019-12-01," Black/African American",6.2,FALSE,FALSE
-2020-01-01," Black/African American",6.1,FALSE,TRUE
+2019-11-01," Black/African American",5.6,FALSE,FALSE
+2019-12-01," Black/African American",6,FALSE,FALSE
+2020-01-01," Black/African American",6.3,FALSE,TRUE
 2020-02-01," Black/African American",6,TRUE,FALSE
 2020-03-01," Black/African American",6.8,TRUE,FALSE
-2020-04-01," Black/African American",16.7,TRUE,TRUE
-2020-05-01," Black/African American",16.7,TRUE,FALSE
-2020-06-01," Black/African American",15.3,TRUE,FALSE
+2020-04-01," Black/African American",16.6,TRUE,TRUE
+2020-05-01," Black/African American",16.8,TRUE,FALSE
+2020-06-01," Black/African American",15.2,TRUE,FALSE
 2020-07-01," Black/African American",14.4,TRUE,TRUE
 2020-08-01," Black/African American",12.8,TRUE,FALSE
-2020-09-01," Black/African American",12,TRUE,FALSE
-2020-10-01," Black/African American",10.8,TRUE,TRUE
-2020-11-01," Black/African American",10.3,TRUE,FALSE
-2020-12-01," Black/African American",9.9,TRUE,FALSE
+2020-09-01," Black/African American",12.1,TRUE,FALSE
+2020-10-01," Black/African American",10.9,TRUE,TRUE
+2020-11-01," Black/African American",10.4,TRUE,FALSE
+2020-12-01," Black/African American",10,TRUE,FALSE
 2021-01-01," Black/African American",9.2,TRUE,TRUE
-2021-02-01," Black/African American",9.9,TRUE,FALSE
-2021-03-01," Black/African American",9.6,TRUE,FALSE
+2021-02-01," Black/African American",9.8,TRUE,FALSE
+2021-03-01," Black/African American",9.5,TRUE,FALSE
 2021-04-01," Black/African American",9.7,TRUE,TRUE
 2021-05-01," Black/African American",9.1,TRUE,FALSE
 2021-06-01," Black/African American",9.2,TRUE,FALSE
 2021-07-01," Black/African American",8.2,TRUE,TRUE
-2021-08-01," Black/African American",8.8,TRUE,FALSE
+2021-08-01," Black/African American",8.7,TRUE,FALSE
+2021-09-01," Black/African American",7.8,TRUE,FALSE
+2021-10-01," Black/African American",7.8,TRUE,TRUE
+2021-11-01," Black/African American",6.5,TRUE,FALSE
+2021-12-01," Black/African American",7.1,TRUE,FALSE
+2022-01-01," Black/African American",6.9,TRUE,TRUE
+2022-02-01," Black/African American",6.6,TRUE,FALSE
 2005-01-01," White",4.5,FALSE,TRUE
 2005-02-01," White",4.6,FALSE,FALSE
 2005-03-01," White",4.5,FALSE,FALSE
@@ -545,11 +557,11 @@
 2016-12-01," White",4.2,FALSE,FALSE
 2017-01-01," White",4.2,FALSE,TRUE
 2017-02-01," White",4,FALSE,FALSE
-2017-03-01," White",3.9,FALSE,FALSE
+2017-03-01," White",3.8,FALSE,FALSE
 2017-04-01," White",3.9,FALSE,TRUE
-2017-05-01," White",3.8,FALSE,FALSE
+2017-05-01," White",3.7,FALSE,FALSE
 2017-06-01," White",3.8,FALSE,FALSE
-2017-07-01," White",3.7,FALSE,TRUE
+2017-07-01," White",3.8,FALSE,TRUE
 2017-08-01," White",3.9,FALSE,FALSE
 2017-09-01," White",3.7,FALSE,FALSE
 2017-10-01," White",3.6,FALSE,TRUE
@@ -561,10 +573,10 @@
 2018-04-01," White",3.6,FALSE,TRUE
 2018-05-01," White",3.5,FALSE,FALSE
 2018-06-01," White",3.5,FALSE,FALSE
-2018-07-01," White",3.3,FALSE,TRUE
-2018-08-01," White",3.4,FALSE,FALSE
+2018-07-01," White",3.4,FALSE,TRUE
+2018-08-01," White",3.5,FALSE,FALSE
 2018-09-01," White",3.3,FALSE,FALSE
-2018-10-01," White",3.3,FALSE,TRUE
+2018-10-01," White",3.4,FALSE,TRUE
 2018-11-01," White",3.4,FALSE,FALSE
 2018-12-01," White",3.4,FALSE,FALSE
 2019-01-01," White",3.5,FALSE,TRUE
@@ -574,31 +586,37 @@
 2019-05-01," White",3.3,FALSE,FALSE
 2019-06-01," White",3.3,FALSE,FALSE
 2019-07-01," White",3.3,FALSE,TRUE
-2019-08-01," White",3.4,FALSE,FALSE
+2019-08-01," White",3.5,FALSE,FALSE
 2019-09-01," White",3.2,FALSE,FALSE
 2019-10-01," White",3.3,FALSE,TRUE
-2019-11-01," White",3.3,FALSE,FALSE
-2019-12-01," White",3.1,FALSE,FALSE
-2020-01-01," White",3,FALSE,TRUE
+2019-11-01," White",3.2,FALSE,FALSE
+2019-12-01," White",3.2,FALSE,FALSE
+2020-01-01," White",3.1,FALSE,TRUE
 2020-02-01," White",3,TRUE,FALSE
 2020-03-01," White",3.9,TRUE,FALSE
 2020-04-01," White",14.1,TRUE,TRUE
 2020-05-01," White",12.3,TRUE,FALSE
-2020-06-01," White",10.1,TRUE,FALSE
+2020-06-01," White",10,TRUE,FALSE
 2020-07-01," White",9.2,TRUE,TRUE
 2020-08-01," White",7.4,TRUE,FALSE
 2020-09-01," White",7,TRUE,FALSE
 2020-10-01," White",6,TRUE,TRUE
-2020-11-01," White",5.9,TRUE,FALSE
-2020-12-01," White",6,TRUE,FALSE
+2020-11-01," White",6,TRUE,FALSE
+2020-12-01," White",6.1,TRUE,FALSE
 2021-01-01," White",5.7,TRUE,TRUE
-2021-02-01," White",5.6,TRUE,FALSE
-2021-03-01," White",5.4,TRUE,FALSE
+2021-02-01," White",5.5,TRUE,FALSE
+2021-03-01," White",5.3,TRUE,FALSE
 2021-04-01," White",5.3,TRUE,TRUE
 2021-05-01," White",5.1,TRUE,FALSE
-2021-06-01," White",5.2,TRUE,FALSE
+2021-06-01," White",5.3,TRUE,FALSE
 2021-07-01," White",4.8,TRUE,TRUE
 2021-08-01," White",4.5,TRUE,FALSE
+2021-09-01," White",4.2,TRUE,FALSE
+2021-10-01," White",3.9,TRUE,TRUE
+2021-11-01," White",3.7,TRUE,FALSE
+2021-12-01," White",3.2,TRUE,FALSE
+2022-01-01," White",3.4,TRUE,TRUE
+2022-02-01," White",3.3,TRUE,FALSE
 2005-01-01," Hispanic/Latino",6,FALSE,TRUE
 2005-02-01," Hispanic/Latino",6.3,FALSE,FALSE
 2005-03-01," Hispanic/Latino",5.8,FALSE,FALSE
@@ -758,20 +776,20 @@
 2018-01-01," Hispanic/Latino",4.9,FALSE,TRUE
 2018-02-01," Hispanic/Latino",4.9,FALSE,FALSE
 2018-03-01," Hispanic/Latino",4.9,FALSE,FALSE
-2018-04-01," Hispanic/Latino",4.8,FALSE,TRUE
+2018-04-01," Hispanic/Latino",4.7,FALSE,TRUE
 2018-05-01," Hispanic/Latino",4.8,FALSE,FALSE
 2018-06-01," Hispanic/Latino",4.6,FALSE,FALSE
 2018-07-01," Hispanic/Latino",4.5,FALSE,TRUE
 2018-08-01," Hispanic/Latino",4.7,FALSE,FALSE
 2018-09-01," Hispanic/Latino",4.6,FALSE,FALSE
 2018-10-01," Hispanic/Latino",4.4,FALSE,TRUE
-2018-11-01," Hispanic/Latino",4.6,FALSE,FALSE
+2018-11-01," Hispanic/Latino",4.7,FALSE,FALSE
 2018-12-01," Hispanic/Latino",4.5,FALSE,FALSE
-2019-01-01," Hispanic/Latino",4.8,FALSE,TRUE
+2019-01-01," Hispanic/Latino",4.7,FALSE,TRUE
 2019-02-01," Hispanic/Latino",4.3,FALSE,FALSE
 2019-03-01," Hispanic/Latino",4.5,FALSE,FALSE
 2019-04-01," Hispanic/Latino",4.1,FALSE,TRUE
-2019-05-01," Hispanic/Latino",4.1,FALSE,FALSE
+2019-05-01," Hispanic/Latino",4.2,FALSE,FALSE
 2019-06-01," Hispanic/Latino",4.3,FALSE,FALSE
 2019-07-01," Hispanic/Latino",4.4,FALSE,TRUE
 2019-08-01," Hispanic/Latino",4.2,FALSE,FALSE
@@ -781,21 +799,27 @@
 2019-12-01," Hispanic/Latino",4.3,FALSE,FALSE
 2020-01-01," Hispanic/Latino",4.3,FALSE,TRUE
 2020-02-01," Hispanic/Latino",4.4,TRUE,FALSE
-2020-03-01," Hispanic/Latino",6,TRUE,FALSE
-2020-04-01," Hispanic/Latino",18.9,TRUE,TRUE
+2020-03-01," Hispanic/Latino",5.9,TRUE,FALSE
+2020-04-01," Hispanic/Latino",18.8,TRUE,TRUE
 2020-05-01," Hispanic/Latino",17.6,TRUE,FALSE
 2020-06-01," Hispanic/Latino",14.5,TRUE,FALSE
-2020-07-01," Hispanic/Latino",12.7,TRUE,TRUE
-2020-08-01," Hispanic/Latino",10.5,TRUE,FALSE
-2020-09-01," Hispanic/Latino",10.3,TRUE,FALSE
-2020-10-01," Hispanic/Latino",8.8,TRUE,TRUE
-2020-11-01," Hispanic/Latino",8.4,TRUE,FALSE
-2020-12-01," Hispanic/Latino",9.3,TRUE,FALSE
+2020-07-01," Hispanic/Latino",12.8,TRUE,TRUE
+2020-08-01," Hispanic/Latino",10.6,TRUE,FALSE
+2020-09-01," Hispanic/Latino",10.4,TRUE,FALSE
+2020-10-01," Hispanic/Latino",8.9,TRUE,TRUE
+2020-11-01," Hispanic/Latino",8.6,TRUE,FALSE
+2020-12-01," Hispanic/Latino",9.4,TRUE,FALSE
 2021-01-01," Hispanic/Latino",8.6,TRUE,TRUE
-2021-02-01," Hispanic/Latino",8.5,TRUE,FALSE
-2021-03-01," Hispanic/Latino",7.9,TRUE,FALSE
-2021-04-01," Hispanic/Latino",7.9,TRUE,TRUE
-2021-05-01," Hispanic/Latino",7.3,TRUE,FALSE
-2021-06-01," Hispanic/Latino",7.4,TRUE,FALSE
-2021-07-01," Hispanic/Latino",6.6,TRUE,TRUE
-2021-08-01," Hispanic/Latino",6.4,TRUE,FALSE
+2021-02-01," Hispanic/Latino",8.4,TRUE,FALSE
+2021-03-01," Hispanic/Latino",7.7,TRUE,FALSE
+2021-04-01," Hispanic/Latino",7.7,TRUE,TRUE
+2021-05-01," Hispanic/Latino",7.1,TRUE,FALSE
+2021-06-01," Hispanic/Latino",7.2,TRUE,FALSE
+2021-07-01," Hispanic/Latino",6.4,TRUE,TRUE
+2021-08-01," Hispanic/Latino",6.2,TRUE,FALSE
+2021-09-01," Hispanic/Latino",6.1,TRUE,FALSE
+2021-10-01," Hispanic/Latino",5.7,TRUE,TRUE
+2021-11-01," Hispanic/Latino",5.2,TRUE,FALSE
+2021-12-01," Hispanic/Latino",4.9,TRUE,FALSE
+2022-01-01," Hispanic/Latino",4.9,TRUE,TRUE
+2022-02-01," Hispanic/Latino",4.4,TRUE,FALSE

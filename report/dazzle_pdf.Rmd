@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: pdf_document
 params:
   dept: 'Management Committee'
-  data_end_date: '2021-09-01'
+  data_end_date: '2022-03-01'
 
 ---
 <!-- (stuff above this line is YAML and behaves differently than the rest of the doc) -->
