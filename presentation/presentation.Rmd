@@ -304,17 +304,13 @@ R Markdown files are designed to be used in three ways:
 
 ---
 
-## Let's do it!
+## [*Action Item*] R Markdown Walkthrough
 
- 1. Open the 0_dazzle.Rmd file inside the report folder
-     - YAML Header
+ - Open the dazzle.Rmd file inside the report folder
+     - YAML Header & knitting with parameters
      - Code chunks
-     - Markdown/LaTeX
- 2. Open the 1_dazzle.Rmd file inside the report folder
+     - Markdown & LaTeX
      - File organization
- 3. Open the 2_dazzle.Rmd file inside the report folder
-     - Knitting with parameters
- 4. Open the 3_dazzle.Rmd file inside the report folder
      - Adding HTML and tables
 ---
 
