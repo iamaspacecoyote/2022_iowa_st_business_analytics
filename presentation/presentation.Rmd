@@ -3,6 +3,7 @@
 output:
   xaringan::moon_reader:
     seal: false
+    self_contained: true
     css: custom.css
     nature:
       slideNumberFormat: "%current%"
@@ -86,7 +87,7 @@ class: inverse center middle
 ---
 ## Objectives of this discussion
 
-- Provide a starter pack on the R ecosystem and setup to support report creation in HTML
+- **Provide a starter pack on the R ecosystem to support report creation in HTML**
 
 --
 
@@ -172,7 +173,8 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
 ## R packages
 
  - The open source nature of R allows users to create software extensions called *packages*.
- - Packages are the fundamental units of reproducible R code.
+ - Packages are the fundamental units of reproducible R code and contain groups of useful functions.
+     - [CRAN is a great place to start to find packages.](https://cran.r-project.org/web/packages/available_packages_by_name.html)
  - [You can make your own packages to support your work!](https://www.youtube.com/watch?v=J45Hs9XyN68)
  
  .center[
@@ -183,6 +185,7 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
 
 ## [*Action Item*] Installing Packages
 
+### [Install packages for this talk (Video)](https://youtu.be/_a9149G8LKs)
  - Open RStudio
  - Run the following command in your R console window
  
@@ -202,13 +205,19 @@ knitr::include_graphics("img/code_hero_rstats.png")
 ]
 .pull-right[
 
-- R Ladies - worldwide organization to promote gender diversity
+- [R Ladies](https://rladies.org/) - worldwide organization to promote gender diversity
  
 - R User Groups - in many major cities across the world
 
 - R conferences - [rstudio::conf](https://www.rstudio.com/conference/), [useR!](https://user2022.r-project.org/), many local options
  
-- R Twitter (#rstats)
+- [R Twitter (#rstats)](https://twitter.com/hashtag/rstats)
+  - [Hadley Wickham](https://twitter.com/hadleywickham)
+  - [Jenny Bryan](https://twitter.com/jennybryan)
+  - [Dirk Eddelbuettel](https://twitter.com/eddelbuettel)
+  - [Alison Presmanes Hill](https://twitter.com/apreshill/)
+  - [Tom Mock](https://twitter.com/thomas_mock)
+  - [Julia Silge](https://twitter.com/juliasilge)
 ]
 ---
 
@@ -251,6 +260,21 @@ R projects define your working directories:
 
 ---
 
+## [*Action Item*] Open/Make an R project
+
+### [Create a Project (Video)](https://youtu.be/CojhAWZ92FE)
+ 1. Open RStudio 
+ 2. Configure global options to avoid saving .Rdata (1-time step)
+     - Tools -> Global Options -> Workspace -> Uncheck the box. Change the dropdown to Never.
+     - Restart RStudio
+ 3. Create an R project to associate with a set of files
+
+### [Open the Project for this talk (Video)](https://youtu.be/h6w5cn4xaKE)
+ 1. Download files from Github
+ 2. Click on R project file
+ 
+---
+
 ## Folder Infrastructure
 
 .pull-left[ 
@@ -270,16 +294,6 @@ R projects define your working directories:
 
 ---
 
-## [*Action Item*] Make an R project
-
- 1. Open RStudio 
- 2. Configure global options to avoid saving .Rdata
-     - Tools -> Global Options -> Workspace -> Uncheck the box. Change the dropdown to Never.
-     - Restart RStudio
- 3. Create an R project to associate with this talk or another set of files
-
----
-
 .center[![Artwork by @allison_horst](img/rmarkdown_wizards.png)]
 
 ---
@@ -293,11 +307,11 @@ R code + Markdown (text-to-HTML conversion tool) = R Markdown
 R Markdown files are designed to be used in three ways:
 
 --
- - As an environment for you to do data science.
+ - As an environment for you to do data science or analytics.
  
 --
 
- - Collaborating with other data scientists with interest in your conclusions and how you reached them (the code).
+ - Collaborating with colleagues with interest in your conclusions and how you reached them (the code).
 
 --
  - **For communicating to decision makers, who want to focus on the conclusions, not the code behind the analysis.**
@@ -312,6 +326,8 @@ R Markdown files are designed to be used in three ways:
      - Markdown & LaTeX
      - File organization
      - Adding HTML and tables
+     
+ - [Download the R Markdown Cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/rmarkdown.pdf)
 ---
 
 ## Dazzling Elements in R Markdown
