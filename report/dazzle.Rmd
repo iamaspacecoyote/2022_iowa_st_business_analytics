@@ -4,8 +4,14 @@ author: "Lindsey Dietz, PhD"
 date: "`r Sys.Date()`"
 output: 
   html_document:
-    theme: lumen
-    highlight: tango
+    theme:
+      bg: "#191919"
+      fg: "#FDF7F7"
+      primary: "#00ffff"
+      base_font:
+        google: "Prompt"
+      code_font:
+        google: "JetBrains Mono"
     code_folding: hide
     code_download: true
 params:
@@ -41,14 +47,16 @@ This is my report for the `r paste(params$dept)`. I'm creating a plot using `r p
 <!-- (** makes it bold) -->
 **This is really important information that people should read before looking at my output.**
 
-Here is a key formula that the reader should know about:
+Here is a key formula that the reader should be aware of:
 $y = \beta_0 + \beta_1 x + \epsilon; 
 \epsilon \sim N(0,\sigma^2)$.
 
 References:
 
 <!-- (one type of link) -->
- - Tabs: https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html
+ - How I made the tabs: https://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html
+
+<!-- (another type of link) -->
  - [Using Rmarkdown in your development process](https://rstudio.com/resources/rstudioconf-2020/rmarkdown-driven-development/)
 
 <!-- (another type of link) -->
@@ -63,10 +71,11 @@ library(tidyr)
 ```{r libraries2, echo = TRUE}
 #The report
 library(rmarkdown)
+#Theming
+library(bslib)
 
 #Tables
 library(DT)
-library(reactable)
 
 #Plots
 library(ggplot2)
@@ -74,16 +83,18 @@ library(plotly)
 library(highcharter)
 ```
 
-I'm going to get some unemployment data from FRED to demo.
+I'm getting some unemployment data from FRED to demo.
 
 ```{r, results = 'hide', echo = TRUE}
 source("../scripts/fred_script.R")
 analyst_info <- data.frame(data_start_date = params$data_start_date, data_end_date = params$data_end_date)
 df <- fred_function(start_date = params$data_start_date, end_date = params$data_end_date)
 ```
+
 <!-- I can directly add HTML into my document -->
 <details>
-<summary> Analysts might want to view this information to confirm the correct data was used. </summary>
+<summary> Analysts might want to view this information to confirm the correct data was used. 
+</summary>
 ```{r}
 print(analyst_info)
 ```
@@ -92,6 +103,7 @@ print(analyst_info)
 ## Interactive Tables {.tabset .tabset-pills}
 <!-- Try changing .tabset-pills to .tabset-dropdown -->
 
+<!-- Second set of tabs -->
 ### with DT
 
 [The R package `DT` provides an R interface to the JavaScript library DataTables](https://rstudio.github.io/DT/). R data objects (matrices or data frames) can be displayed as tables on HTML pages, and DataTables provides filtering, pagination, sorting, and many other features in the tables.
@@ -99,38 +111,6 @@ print(analyst_info)
 ```{r fred_table}
 DT::datatable(df, filter = 'top', extensions = 'Buttons', 
               options = list(dom = 'Bfrtip', buttons = c('copy', 'csv', 'excel')))
-```
-
-### with reactable
-
-[Interactive data tables for R, based on the React Table library and made with `reactR`.](https://glin.github.io/reactable/index.html)
-
- - Features
- - Sorting, filtering, pagination
- - Grouping and aggregation
- - Built-in column formatting
- - Custom rendering via R or JavaScript — use Shiny HTML tags and HTML widgets in tables
- - Expandable rows and nested tables
- - Conditional styling
- - Works seamlessly within R Markdown documents and Shiny apps
-
-```{r data}
-
-#Create a cool color scale
-orange_pal <- function(x) rgb(colorRamp(c('#FFFFFF', "#ffb54d", "#B22222"))(x), maxColorValue = 255)
-
-reactable::reactable(df, filterable = TRUE, groupBy = "Category", 
-  columns = list(
-    UR = colDef(
-      style = function(UR) {
-        normalized <- (UR - min(df$UR)) / (max(df$UR) - min(df$UR))
-        color <- orange_pal(normalized)
-        list(background = color)
-      }
-    )
-  )
-)
-
 ```
 
 ## Interactive or Fixed Plot
@@ -146,12 +126,12 @@ if(params$plot_type == 'plotly'){
   #Dynamic plot with plotly 
   ggplotly(myplot)
   
-}else if (params$plot_type == 'highcharter'){
+} else if (params$plot_type == 'highcharter'){
   
  #Dynamic plot with highcharter
  df %>% 
-    dplyr::select(Date, Category, UR)  %>% 
-    highcharter::hchart(., 
+  dplyr::select(Date, Category, UR)  %>% 
+  highcharter::hchart(., 
          type = "line", 
          hcaes(x = Date, 
                y = UR, 
@@ -160,7 +140,7 @@ if(params$plot_type == 'plotly'){
            labels = list(format = "{value}%")) %>% 
   hc_tooltip(pointFormat = '{point.x:%Y-%m-%d}')
   
-}else if (params$plot_type == 'ggplot2'){
+} else if (params$plot_type == 'ggplot2'){
   #Fixed ggplot
   myplot
 }

@@ -205,6 +205,7 @@
 2021-12-01,"Total",3.9,TRUE,FALSE
 2022-01-01,"Total",4,TRUE,TRUE
 2022-02-01,"Total",3.8,TRUE,FALSE
+2022-03-01,"Total",3.6,TRUE,FALSE
 2005-01-01," Black/African American",10.6,FALSE,TRUE
 2005-02-01," Black/African American",10.9,FALSE,FALSE
 2005-03-01," Black/African American",10.5,FALSE,FALSE
@@ -411,6 +412,7 @@
 2021-12-01," Black/African American",7.1,TRUE,FALSE
 2022-01-01," Black/African American",6.9,TRUE,TRUE
 2022-02-01," Black/African American",6.6,TRUE,FALSE
+2022-03-01," Black/African American",6.2,TRUE,FALSE
 2005-01-01," White",4.5,FALSE,TRUE
 2005-02-01," White",4.6,FALSE,FALSE
 2005-03-01," White",4.5,FALSE,FALSE
@@ -617,6 +619,7 @@
 2021-12-01," White",3.2,TRUE,FALSE
 2022-01-01," White",3.4,TRUE,TRUE
 2022-02-01," White",3.3,TRUE,FALSE
+2022-03-01," White",3.2,TRUE,FALSE
 2005-01-01," Hispanic/Latino",6,FALSE,TRUE
 2005-02-01," Hispanic/Latino",6.3,FALSE,FALSE
 2005-03-01," Hispanic/Latino",5.8,FALSE,FALSE
@@ -823,3 +826,4 @@
 2021-12-01," Hispanic/Latino",4.9,TRUE,FALSE
 2022-01-01," Hispanic/Latino",4.9,TRUE,TRUE
 2022-02-01," Hispanic/Latino",4.4,TRUE,FALSE
+2022-03-01," Hispanic/Latino",4.2,TRUE,FALSE

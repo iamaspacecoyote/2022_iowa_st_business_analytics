@@ -10,7 +10,7 @@ output:
       highlightStyle: github
       highlightLines: true
       ratio: 16:9
-      countIncrementalSlides: true
+      countIncrementalSlides: false
 ---
 
 class: inverse center middle
@@ -91,7 +91,7 @@ class: inverse center middle
 
 --
 
-- Provide examples of table and graphics packages to display analysis
+- Provide examples of packages to build reports and display analysis
 
 --
 
@@ -108,7 +108,7 @@ class: inverse center middle
 --
 
 - Details of the tables or graphics packages 
-    - These could easily be their own long form tutorials
+    - These could easily be (and probably already are) their own long form tutorials.
 
 ---
 
@@ -158,10 +158,25 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
 
 ---
 
+## R <- Iowa State University
+Two R visionaries did their PhDs in Statistics at Iowa State. 
+.pull-left[
+[**Hadley Wickham**](https://hadley.nz/), Chief Scientist at RStudio
+Creator of the [`tidyverse`](https://www.tidyverse.org/) ([`ggplot2`](https://ggplot2.tidyverse.org/), [`dplyr`](https://dplyr.tidyverse.org/), ...)
+![](img/hadley.jpeg)
+]
+.pull-right[
+[**Yihui Xie**](https://yihui.org/), Software Engineer at RStudio
+Creator of [`rmarkdown`](https://rmarkdown.rstudio.com/) + workflow tools
+![](img/yihui.jpg)
+]
+
+---
+
 ## [*Action Item*] Download and Install R & RStudio
 
 - Install R 4.1.3 or higher
-    - Navigate to a nearby CRAN mirror: https://cran.r-project.org/mirrors.html
+    - Navigate to a geographical close CRAN mirror: https://cran.r-project.org/mirrors.html
         - Use the Iowa State mirror: https://mirror.las.iastate.edu/CRAN/
     - Choose the download for your operating system
 
@@ -174,7 +189,7 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
 
  - The open source nature of R allows users to create software extensions called *packages*.
  - Packages are the fundamental units of reproducible R code and contain groups of useful functions.
-     - [CRAN is a great place to start to find packages.](https://cran.r-project.org/web/packages/available_packages_by_name.html)
+     - [CRAN is a great place to find packages.](https://cran.r-project.org/web/packages/available_packages_by_name.html)
  - [You can make your own packages to support your work!](https://www.youtube.com/watch?v=J45Hs9XyN68)
  
  .center[
@@ -190,8 +205,8 @@ RStudio is an **open source** integrated development environment (IDE) for R. It
  - Run the following command in your R console window
  
 ```{r library_install, eval=FALSE}
-install.packages(c('dplyr', 'tidyr', 'rmarkdown', 
-                   'ggplot2', 'fredr', 'highcharter', 'plotly'))
+install.packages(c('dplyr', 'tidyr', 'rmarkdown', 'bslib', 
+                   'ggplot2', 'fredr', 'highcharter', 'plotly', 'DT'))
 ```
 
 ---
@@ -218,20 +233,6 @@ knitr::include_graphics("img/code_hero_rstats.png")
   - [Alison Presmanes Hill](https://twitter.com/apreshill/)
   - [Tom Mock](https://twitter.com/thomas_mock)
   - [Julia Silge](https://twitter.com/juliasilge)
-]
----
-
-## R <- Iowa State University
-Two R visionaries did their PhDs in Statistics at Iowa State. 
-.pull-left[
-[**Hadley Wickham**](https://hadley.nz/), Chief Scientist at RStudio
-Creator of the `tidyverse` (`ggplot2`, `dplyr`, ...)
-![](img/hadley.jpeg)
-]
-.pull-right[
-[**Yihui Xie**](https://yihui.org/), Software Engineer at RStudio
-Creator of `rmarkdown` + workflow tools
-![](img/yihui.jpg)
 ]
 
 ---
@@ -322,22 +323,16 @@ R Markdown files are designed to be used in three ways:
 
  - Open the dazzle.Rmd file inside the report folder
      - YAML Header & knitting with parameters
-     - Code chunks
+        - [Style output using bslib themes](https://rstudio.github.io/bslib/)     
+        - [Style output using HTML themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/)
+     - Code chunks and hiding code
      - Markdown & LaTeX
-     - File organization
-     - Adding HTML and tables
+     - Using tabs and drop downs to improve pagination
+     - Connection to file organization
+     - Adding HTML
+         - 'Easter eggs' for other analysts
      
  - [Download the R Markdown Cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/rmarkdown.pdf)
----
-
-## Dazzling Elements in R Markdown
-
- - Using parameters in YAML header
- - Hiding code chunks and including 'Easter eggs' for other analysts
- - Using tabs and drop downs to improve pagination
- - Adding meaningful color to output
- - [Style output using HTML themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/)
-
 ---
 
 ## Why HTML
@@ -369,9 +364,17 @@ tinytex::install_tinytex()
 
 ---
 
+## The Rest of the Owl
+
+.center[
+![owl](img/owl.png)
+]
+
+---
+
 ## Building tabular content
 
-There are many table packages. For HTML, `DT` and `reactable` are good starting points. For pdf, `kableExtra` is the gold standard.
+There are many table packages. For HTML, [`DT`](https://rstudio.github.io/DT/) or [`reactable`](https://glin.github.io/reactable/) are good starting points. For pdf, [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) is the gold standard.
 
 .center[![](img/tidydata_7.jpg)]
 
@@ -379,7 +382,7 @@ There are many table packages. For HTML, `DT` and `reactable` are good starting 
 
 ## Building graphical content
 
-`ggplot2` works great as a static graphics package. For interactive graphics, use packages like `plotly` or `highcharter`.
+[`ggplot2`](https://ggplot2.tidyverse.org/) works great as a static graphics package. For interactive graphics, use packages like [`plotly`](https://plotly.com/r/) or [`highcharter`](https://jkunst.com/highcharter/.
 
 .center[![](img/presenting_monster.png)]
 
