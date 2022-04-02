@@ -9,7 +9,7 @@ output:
     code_folding: hide
     code_download: true
 params:
-  dept: 'Management Committee'
+  dept: 'HR Committee'
   plot_type: 
       value: 'highcharter'
       choices: ['highcharter', 'ggplot2', 'plotly']

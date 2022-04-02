@@ -385,32 +385,26 @@ There are many table packages. For HTML, `DT` and `reactable` are good starting 
 
 ---
 
-## Tips for Tables and Graphics
+## UX Principles 
 
  - Create tables and graphics to support a narrative
      + Storyboard your ideas on paper or a whiteboard before diving in
  - Build the tables and graphics outside of R Markdown first to avoid extra loading overhead
  - Think about your user's needs
      + Do they like to download the data?
-     + Are you using color in an intentional way? (1 in 12 men are colorblind)
-
----
-
-## Additional UX principles for reporting
-
-Your report should:
-
- - Have a clear hierarchy that makes navigation natural
- - Understand and embrace accessibility
- - Maintain time consistency - transition to or away from ideas slowly
+     + Are you using color in an intentional way? ([1 in 12 men are colorblind](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness))
+ - Your report should:
+     + Have a clear hierarchy that makes navigation natural
+     + Understand and embrace accessibility
+     + Maintain time consistency - transition to or away from ideas slowly
  
 ---
 
 ## Extensions
 
- - Version control of your reports
+ - Version control of your reports (Git or other options)
  - Deployment on a centralized server such as RStudio Connect opens up options such as scheduled reporting with email blasts
- - HTML reporting could be extended to true Shiny reporting if your users are asking for more interactivity 
+ - HTML reporting could be extended to [true Shiny](https://shiny.rstudio.com/) reporting if your users are asking for more interactivity 
 
 ---
 
