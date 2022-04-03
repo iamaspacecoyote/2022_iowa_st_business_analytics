@@ -4,7 +4,7 @@ author: "Lindsey Dietz, PhD"
 date: "`r Sys.Date()`"
 output: 
   html_document:
-    theme:
+    theme: 	
       bg: "#191919"
       fg: "#FDF7F7"
       primary: "#00ffff"
@@ -24,8 +24,7 @@ params:
 ---
 <!-- (stuff above this line is YAML Ain't Markup Language (YAML) and behaves differently than the rest of the doc) -->
 
-
-<!-- (this chunk shows up when you create Rmarkdown to show you how to set global options; `echo = FALSE` prevents printing of the R code inside chunks) -->
+<!-- (Setting defaults about your R code chunks) -->
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_chunk$set(message = FALSE)
@@ -35,7 +34,6 @@ knitr::opts_chunk$set(warning = FALSE)
 <!-- (using parameters in Rmarkdown; don't forget the r) -->
 <!-- (This statement above all tabs) -->
 This is my report for the `r paste(params$dept)`. I'm creating a plot using `r paste(params$plot_type)`. This text lives "above the fold".  
-
 
 <!-- (making tabs) -->
 <!-- # header 1, all tabs need to be ## header 2 to nest -->
@@ -48,6 +46,8 @@ This is my report for the `r paste(params$dept)`. I'm creating a plot using `r p
 **This is really important information that people should read before looking at my output.**
 
 Here is a key formula that the reader should be aware of:
+
+<!-- (Using LaTeX syntax) -->
 $y = \beta_0 + \beta_1 x + \epsilon; 
 \epsilon \sim N(0,\sigma^2)$.
 
@@ -62,7 +62,7 @@ References:
 <!-- (another type of link) -->
 These are the R packages I'm going to highlight:
 
-<!-- (here is an R code chunk; I've used some options to hide things) -->
+<!-- (R code chunk completely hidden by using include == FALSE) -->
 ```{r libraries1, include = FALSE}
 library(dplyr)
 library(tidyr)
@@ -86,12 +86,20 @@ library(highcharter)
 I'm getting some unemployment data from FRED to demo.
 
 ```{r, results = 'hide', echo = TRUE}
+# Source an R script using the relative location
+# Made possible because of the R project
 source("../scripts/fred_script.R")
-analyst_info <- data.frame(data_start_date = params$data_start_date, data_end_date = params$data_end_date)
-df <- fred_function(start_date = params$data_start_date, end_date = params$data_end_date)
+
+# Create a data frame of info for tech analysts
+analyst_info <- data.frame(data_start_date = params$data_start_date, 
+                           data_end_date = params$data_end_date)
+
+# Run the function from my script using RMD parameter settings
+df <- fred_function(start_date = params$data_start_date,
+                    end_date = params$data_end_date)
 ```
 
-<!-- I can directly add HTML into my document -->
+<!-- Directly add HTML into a report -->
 <details>
 <summary> Analysts might want to view this information to confirm the correct data was used. 
 </summary>
@@ -100,7 +108,7 @@ print(analyst_info)
 ```
 </details>
 
-## Interactive Tables {.tabset .tabset-pills}
+## Interactive Tables {.tabset .tabset-dropdown}
 <!-- Try changing .tabset-pills to .tabset-dropdown -->
 
 <!-- Second set of tabs -->
@@ -108,40 +116,42 @@ print(analyst_info)
 
 [The R package `DT` provides an R interface to the JavaScript library DataTables](https://rstudio.github.io/DT/). R data objects (matrices or data frames) can be displayed as tables on HTML pages, and DataTables provides filtering, pagination, sorting, and many other features in the tables.
 
+<!-- (Generate a table) -->
 ```{r fred_table}
-DT::datatable(df, filter = 'top', extensions = 'Buttons', 
-              options = list(dom = 'Bfrtip', buttons = c('copy', 'csv', 'excel')))
+DT::datatable(df, 
+              filter = 'top', 
+              extensions = 'Buttons', 
+              options = list(dom = 'Bfrtip', 
+                             buttons = c('copy', 'csv', 'excel')))
 ```
 
 ## Interactive or Fixed Plot
 
-<!-- (Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.) -->
+<!-- (Generate a plot) -->
 ```{r plot, fig.width=10}
 
 myplot <- ggplot(df, aes(x = Date, y = UR, color = Category)) + 
   geom_line() +
-  theme_bw() + ylab("Unemployment Rate")
+  theme_bw() + 
+  ylab("Unemployment Rate")
 
 if(params$plot_type == 'plotly'){
-  #Dynamic plot with plotly 
+  # Print dynamic plot with plotly 
   ggplotly(myplot)
   
 } else if (params$plot_type == 'highcharter'){
   
- #Dynamic plot with highcharter
+ # Print dynamic plot with highcharter
  df %>% 
-  dplyr::select(Date, Category, UR)  %>% 
+  dplyr::select(Date, Category, UR) %>% 
   highcharter::hchart(., 
          type = "line", 
-         hcaes(x = Date, 
-               y = UR, 
-               group = Category)) %>% 
-  hc_yAxis(opposite = TRUE,
-           labels = list(format = "{value}%")) %>% 
+         hcaes(x = Date, y = UR, group = Category)) %>% 
+  hc_yAxis(opposite = TRUE, labels = list(format = "{value}%")) %>% 
   hc_tooltip(pointFormat = '{point.x:%Y-%m-%d}')
   
 } else if (params$plot_type == 'ggplot2'){
-  #Fixed ggplot
+  # Print fixed ggplot
   myplot
 }
 
